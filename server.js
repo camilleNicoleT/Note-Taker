@@ -1,35 +1,47 @@
 const fs = require('fs');
 const path = require('path');
 const express = require('express');
-const { notes } = require('./data/notes');
+const { notes } = require('./db/db');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
-// // parse incoming string or array data
-// app.use(express.urlencoded({ extended: true }));
-// // parse incoming JSON data
-// app.use(express.json());
+// parse incoming string or array data
+app.use(express.urlencoded({ extended: true }));
+// parse incoming JSON data
+app.use(express.json());
 
+function filterByQuery(query, notesArray) {
+   let filteredResults = notesArray;
+          
+    if (query.title) {
+      filteredResults = filteredResults.filter(note => note.title === query.title);
+    }
+    if (query.text) {
+      filteredResults = filteredResults.filter(note => note.text === query.text);
+    }
+    return filteredResults;
+  }
 
 function findById(id, notesArray) {
     const result = notesArray.filter(notes => notes.id === id)[0];
     return result;
   }
   
-  function createNewNote(body, notesArray) {
-    const notes = body;
+function createNewNote(body, notesArray) {
+    const note = body;
   notesArray.push(note);
     fs.writeFileSync(
-      path.join(__dirname, './data/db.json'),
+      path.join(__dirname, './db/db.json'),
       JSON.stringify({notes:notesArray }, null, 2)
     );
     returnNote;
   }
-  function validateNote(note) {
+
+function validateNote(note) {
     if (!note.title || typeofNote.title !== 'string') {
       return false;
     }
-});
+};
 
 app.get('/api/notes/:id', (req, res) => {
 const result = findById(req.params.id, notes);
@@ -52,8 +64,6 @@ app.get('/api/notes', (req, res) => {
 
 // // GET * should return the index.html file.
 // app.get(*)
-
-// app.get(api/notes)
 
 // GET /api/notes should read the db.json file and return all saved notes as JSON.
 
