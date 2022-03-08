@@ -1,29 +1,9 @@
 {
   "notes": [
     {
-      "title": "Test title",
-      "text": "Test text",
+      "title": "Create Note Taker",
+      "text": "Type the notes you need to remember",
       "id": "0"
-    },
-    {
-      "title": "TestTitle2",
-      "text": "Test text 2",
-      "id": "1"
-    },
-    {
-      "title": "TestTitle3",
-      "text": "Test text 3",
-      "id": "2"
-    },
-    {
-      "title": "TestTitle3",
-      "text": "Test text 3",
-      "id": "3"
-    },
-    {
-      "title": "TestTitle4",
-      "text": "Test text 4",
-      "id": "4"
-    }
+    }   
   ]
 }
