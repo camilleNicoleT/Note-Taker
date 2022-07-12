@@ -2,9 +2,16 @@
 
 https://vast-ravine-87254.herokuapp.com
 
-## Description
-- Note Taker is an easy to use app that allows you to take notes, save them, edit and delete them. For this project I was given a front end without the ability to save or delete notes and so I upgraded it with an Express.js backend.
+## Table of Contents: 
+   - [Usage](#usage) 
+   - [Questions](#Questions) 
+   - [Technologies](#technologiesused)
 
+## Description
+For this Note Taker app project I took a simple front end without the ability to save or delete notes and upgraded it with an Express.js backend.
+
+## Usage
+- Note Taker is an easy to use app that allows you to create notes, save them, edit and delete them on a server. 
 ![Screen Shot 2022-03-08 at 7 15 32 PM](https://user-images.githubusercontent.com/94029792/157348101-2b4b358e-5875-4c9e-8961-2c831c822a69.png)
 
 - When you start to type in the note information a save button appears.
@@ -13,6 +20,10 @@ https://vast-ravine-87254.herokuapp.com
 
 ## Technologies Used
   Express.js
+  
+## Questions
+For comments or questions contact me through GitHub. Username: https://github.com/camilleNicoleT
+
   
   
   
